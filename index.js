@@ -141,8 +141,3 @@ const startAnimation = () => {
     macchina.init()
 }
 window.requestAnimationFrame(startAnimation)
-
-document.addEventListener('keydown', (event) => {
-
-});
-
