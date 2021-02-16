@@ -1,0 +1,19 @@
+body {
+  overflow: hidden;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  border: 5px solid black;
+  height: 500px;
+  width: 500px;
+}
+
+.car {
+  height: 60px;
+  transform: rotate(90deg);
+}
