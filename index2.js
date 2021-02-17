@@ -14,27 +14,33 @@ class Car {
             console.log(this.keysPressed)
 
             if (this.keysPressed["ArrowRight"] && this.keysPressed["ArrowUp"]) {
+                this.speed = 20
                 this.angle++ * 2
                 this.animate()
             }
             if (this.keysPressed["ArrowLeft"] && this.keysPressed["ArrowUp"]) {
+                this.speed = 20
                 this.angle-- * -2
                 this.animate()
             }
             if (this.keysPressed["ArrowRight"] && this.keysPressed["ArrowDown"]) {
+                this.speed++
                 this.angle++ * -2
                 this.animate()
             }
             if (this.keysPressed["ArrowLeft"] && this.keysPressed["ArrowDown"]) {
+                this.speed++
                 this.angle-- * -2
                 this.animate()
             }
             if (this.keysPressed["ArrowRight"]) {
-                this.speed = 10
+                this.speed = 0
+                this.angle++
                 this.animate()
             }
             if (this.keysPressed['ArrowLeft']) {
-                this.speed = 10
+                this.speed = 0
+                this.angle--
                 this.animate()
             }
             if (this.keysPressed['ArrowUp']) {
@@ -42,7 +48,7 @@ class Car {
                 this.animate()
             }
             if (this.keysPressed['ArrowDown']) {
-                this.speed = -10
+                this.speed = -25
                 this.speed--
                 this.animate()
             }
