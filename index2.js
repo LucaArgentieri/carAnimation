@@ -11,18 +11,11 @@ class Car {
         window.addEventListener('keydown', evt => {
 
             this.keysPressed[evt.key] = true;
-            console.log(this.keysPressed)
 
-            if (this.keysPressed["ArrowRight"] && this.keysPressed["ArrowUp"]) {
-                this.speed = 20
-                this.angle++ * 2
-                this.animate()
-            }
-            if (this.keysPressed["ArrowLeft"] && this.keysPressed["ArrowUp"]) {
-                this.speed = 20
-                this.angle-- * -2
-                this.animate()
-            }
+
+
+
+
             if (this.keysPressed["ArrowRight"] && this.keysPressed["ArrowDown"]) {
                 this.speed++
                 this.angle++ * -2
@@ -33,15 +26,19 @@ class Car {
                 this.angle-- * -2
                 this.animate()
             }
-            if (this.keysPressed["ArrowRight"]) {
-                this.speed = 0
-                this.angle++
+            if (this.keysPressed["ArrowRight"] && this.keysPressed["ArrowUp"]) {
+                this.speed = 10
+                this.speed++
+                this.angle++ * -2
                 this.animate()
+
             }
-            if (this.keysPressed['ArrowLeft']) {
-                this.speed = 0
-                this.angle--
+            if (this.keysPressed["ArrowLeft"] && this.keysPressed["ArrowUp"]) {
+                this.speed = 10
+                this.speed++
+                this.angle-- * -2
                 this.animate()
+
             }
             if (this.keysPressed['ArrowUp']) {
                 this.speed++
@@ -52,6 +49,21 @@ class Car {
                 this.speed--
                 this.animate()
             }
+
+
+            if (this.keysPressed["ArrowRight"]) {
+                this.angle++
+                this.animate()
+                this.speed = 0
+
+            }
+            if (this.keysPressed['ArrowLeft']) {
+                this.angle--
+                this.animate()
+                this.speed = 0
+
+            }
+
 
 
             this.slow()
